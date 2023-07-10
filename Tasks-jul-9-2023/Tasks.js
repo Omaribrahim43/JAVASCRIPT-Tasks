@@ -88,3 +88,38 @@ console.log(array.push(8))
 console.log(array.push(9))
 console.log(array.push(10))
 console.log(array)
+
+/*
+7
+Using the console try to figure out what the thing thats (push, unshift, shift, pop) return to you
+
+var array2 = [5,9,-7,3.5]
+*/
+
+document.getElementById("answer-task8").innerHTML = "SEE THE CONSOLE"
+let array2= [5,9,-7,3.5]
+console.log(array2)
+array2.push(6)
+array2.push(61)
+console.log(array2)
+array2.pop()
+console.log(array2)
+array2.shift()
+console.log(array2)
+array2.unshift(8)
+console.log(array2)
+
+/*
+8.
+Write a JavaScript program to sort the items of an array.
+Sample array : var arr1 = [ -3, 8, 7, 6, 5, -4, 3, 2, 1 ];
+Sample Output : -4,-3,1,2,3,5,6,7,8
+*/
+var array3 = [ -3, 8, 7, 6, 5, -4, 3, 2, 1 ]
+array3 = array3.sort()
+array3.unshift()
+array3.unshift()
+console.log(array3)
+array3.shift(-3,-4)
+
+document.getElementById("answer-task9").innerHTML = array3
