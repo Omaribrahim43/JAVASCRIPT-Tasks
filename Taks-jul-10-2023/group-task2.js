@@ -27,9 +27,7 @@ for (const evennum of arr) {
 */
 let n = 8; 
 let string = "";
-// External loop
 for (let i = 1; i <= n; i++) {
-
   for (let j = 1; j <= i; j++) {
     string += j;
   }
