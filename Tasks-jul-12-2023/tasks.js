@@ -288,7 +288,7 @@ Ex: longerString("air","schoo","car","github")
 
 try all the cases (change the order of the longestString)
 */
-function longerString(s1='', s2='', s3='', s4=''){
+function longerString(...str){
     temp = str[0];
     for(let i = 0; i < str.length; i++) {
         if(str[i].length > temp.length) {
