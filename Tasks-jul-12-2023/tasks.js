@@ -259,24 +259,21 @@ Ex: shorterString("air","tr","car","github","by")
 => by
 
 */
-function shorterString(s1='', s2='', s3='', s4='', s5=''){
-    if(s1.length < s2.length && s1.length < s3.length && s1.length < s4.length && s1.length < s5.length)
-        return s1
-    else if(s2.length < s1.length && s2.length < s3.length && s2.length < s4.length && s2.length < s5.length)
-        return s2
-    else if(s3.length < s1.length && s3.length < s2.length && s3.length < s4.length && s3.length < s5.length)
-        return s3
-    else if(s4.length < s1.length && s4.length < s3.length && s4.length < s2.length && s4.length < s5.length)
-        return s4
-    else   
-        return s5
+function shorterString(...str){
+    temp = str[0];
+    for(let i = 0; i < str.length; i++) {
+        if(str[i].length < temp.length) {
+            temp = str[i];
+        }
+    }
+    console.log(temp);
 }
-console.log(shorterString("air","school","car","by","github"));
-console.log(shorterString("air","tr","car","by","github"));
-console.log(shorterString("by","tr","car","air","github"));
-console.log(shorterString("air","by","car","school","github"));
-console.log(shorterString("air","tr","by","car","github"));
-console.log(shorterString("air","tr","car","github","by"));
+shorterString("air","school","car","by","github")
+shorterString("air","tr","car","by","github")
+shorterString("by","tr","car","air","github")
+shorterString("air","by","car","school","github")
+shorterString("air","tr","by","car","github")
+shorterString("air","tr","car","github","by")
 /*
 14
 Write a function called longerString
@@ -292,18 +289,17 @@ Ex: longerString("air","schoo","car","github")
 try all the cases (change the order of the longestString)
 */
 function longerString(s1='', s2='', s3='', s4=''){
-    if(s1.length > s2.length && s1.length > s3.length && s1.length > s4.length)
-        return s1
-    else if(s2.length > s1.length && s2.length > s3.length && s2.length > s4.length)
-        return s2
-    else if(s3.length > s1.length && s3.length > s2.length && s3.length > s4.length)
-        return s3
-    else
-        return s4
+    temp = str[0];
+    for(let i = 0; i < str.length; i++) {
+        if(str[i].length > temp.length) {
+            temp = str[i];
+        }
+    }
+    console.log(temp);
 }
-console.log(longerString("air","school","car","by","github"));
-console.log(longerString("air","schoo","car","github"));
-console.log(longerString("air","schoo","car","github"));
+longerString("air","school","car","by","github")
+longerString("air","schoo","car","github")
+longerString("air","schoo","car","github")
 /*
 15
 Write a function called isEven
@@ -493,12 +489,15 @@ Ex: counter()
 => 3
 
 */
+let count = 0;
 function counter() {
-    return count += 1;
-    counter();
+    console.log(count++);
 }
-console.log(counter());
-console.log(counter());
+counter()
+counter()
+counter()
+counter()
+counter()
 /*
 24
 Write a function called resetCounter
@@ -530,3 +529,9 @@ Ex: resetCounter()
 Ex: counter()
 => 1
 */
+function resetCounter(){
+    console.log(--count);
+}
+resetCounter()
+resetCounter()
+resetCounter()
