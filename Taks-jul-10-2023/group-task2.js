@@ -8,7 +8,7 @@ for(let i = 1; i <= 10; i++){
 */
 let arr = [13,23,12,45,22,48,66,100]
 for (const evennum of arr) {
-    if(evennum%2==0){
+    if(evennum % 2 == 0){
         console.log(evennum);
     }
 }
