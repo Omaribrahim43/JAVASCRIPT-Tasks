@@ -177,10 +177,10 @@ Ex: sameLength("tree","car")
 => false
 */
 function sameLength(s1='',s2=''){
-    if(s1.length==s2.length)
+    if(s1.length===s2.length)
         return true
     else
-        false
+        return false
 }
 console.log(sameLength("tree","clue"));
 console.log(sameLength("tree","car"));
