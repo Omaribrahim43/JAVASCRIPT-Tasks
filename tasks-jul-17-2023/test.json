@@ -1,0 +1,10 @@
+{
+    "Username": "Omar Migdady",
+    "Age": 21,
+    "contactInfo": {
+        "email":"omar.migdadi43@gmail.com",
+        "phone":"+9626991624" 
+    },
+    "isMarried": false,
+    "address": null
+}

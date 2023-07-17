@@ -1,0 +1,23 @@
+[
+    {
+      "name": "Omar Migdady",
+      "age": 22,
+      "major": "Computer Science",
+      "university": "Yarmouk university",
+      "Image": "myImg.jpg"
+    },
+    {
+        "name": "Sara Manna",
+        "age": 23,
+        "major": "Computer Science",
+        "university": "Yarmouk university",
+        "Image": ""
+    },
+    {
+        "name": "Ahmad Hamad",
+        "age": 23,
+        "major": "Cyper security",
+        "university": "Yarmouk university",
+        "Image": ""
+    }
+  ]
