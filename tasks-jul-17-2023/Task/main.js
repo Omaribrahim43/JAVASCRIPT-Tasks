@@ -30,18 +30,6 @@ btn.onclick = function() {
             image.alt = Obj[i].name;
             imageCell.appendChild(image);
             newRow.appendChild(imageCell);
-                // if(Obj[i].hasOwnProperty(key)) {
-                //     let newCell = document.createElement("td");
-                //     newCell.innerHTML = Obj[i][key];
-                //     if(Obj[i].hasOwnProperty("Image")) {
-                //         let imgCell = document.createElement("td");
-                //         let img = document.createElement("img");
-                //         img.src = Obj[i].Image;
-                //         imgCell.appendChild(img);
-                //         newCell.appendChild(img);
-                //     }
-                //     newRow.appendChild(newCell);
-                // }
             table.appendChild(newRow);
         }
     }
