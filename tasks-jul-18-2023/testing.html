@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>API Example</title>
+</head>
+<body>
+<h1>Posts from JSONPlaceholder API</h1>
+<div id="posts"></div>
+
+<script>
+    // Function to fetch data from the API
+    function fetchPosts() {
+      // Replace the URL with the actual API endpoint
+        const apiUrl = 'https://jsonplaceholder.typicode.com/posts';
+
+      // Fetch the data using the fetch() function
+        fetch(apiUrl)
+            .then(response => response.json()) // Parse the response as JSON
+            .then(posts => {
+                // Handle the data once it's retrieved
+                displayPosts(posts);
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+    }
+    // Function to display the posts in the HTML
+    function displayPosts(posts) {
+        const postsDiv = document.getElementById('posts');
+
+        // Loop through the posts and create HTML elements to display them
+        posts.forEach(post => {
+            const postElement = document.createElement('div');
+            postElement.innerHTML = '<h2>${post.title}</h2><p>${post.body}</p><hr>';
+            postsDiv.appendChild(postElement);
+        });
+    }
+    // Call the fetchPosts function to get data from the API
+    fetchPosts();
+</script>
+</body>
+</html>

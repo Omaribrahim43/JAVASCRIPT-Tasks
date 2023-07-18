@@ -4,20 +4,20 @@
       "age": 22,
       "major": "Computer Science",
       "university": "Yarmouk university",
-      "Image": "myImg.jpg"
+      "Image": "myImg.png"
     },
     {
         "name": "Sara Manna",
         "age": 23,
         "major": "Computer Science",
         "university": "Yarmouk university",
-        "Image": ""
+        "Image": "myImg.png"
     },
     {
         "name": "Ahmad Hamad",
         "age": 23,
         "major": "Cyper security",
         "university": "Yarmouk university",
-        "Image": ""
+        "Image": "myImg.png"
     }
   ]
