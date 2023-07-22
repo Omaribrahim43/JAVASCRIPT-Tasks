@@ -1,23 +1,29 @@
-console.log('Here is : ', 'Object')
-
+console.log("Here is : ", "Object");
 
 /*
 1
 Create an object represents you
 have your first name, last name, age, dob(date of birth), favorite food (3),favorite movie (5)
 */
-
-
-
-
-
+let myInfo = {
+  name: { firstName: "Omar", lastName: "Migdady" },
+  age: 22,
+  dateOfBirth: { month: 12, day: 4, year: 2001 },
+  favFood: ["burger", "pizza", "kabsah"],
+  favMovie: [
+    "intersteller",
+    "fast & furious",
+    "game of thrones",
+    "money hiest",
+  ],
+};
 
 var persons = [
-  { name: { first: 'John', last: 'Hob' }, age: 35 },
-  { name: { first: 'Alex', last: 'Mercer' }, age: 25 },
-  { name: { first: 'Alice', last: 'Zaheer' }, age: 24 },
-  { name: { first: 'Zues', last: 'Odin' }, age: 55 },
-  { name: { first: 'Soso', last: 'Al-Amora' }, age: 67 }
+  { name: { first: "John", last: "Hob" }, age: 35 },
+  { name: { first: "Alex", last: "Mercer" }, age: 25 },
+  { name: { first: "Alice", last: "Zaheer" }, age: 24 },
+  { name: { first: "Zues", last: "Odin" }, age: 55 },
+  { name: { first: "Soso", last: "Al-Amora" }, age: 67 },
 ];
 
 /*
@@ -29,8 +35,10 @@ and return all the first name of the person insides
 
 Ex: firstName(persons) => ['John', 'Alex', 'Alice', 'Thor', 'Soso']
 */
-
-
+function firstName(arr) {
+  return arr.map((ele) => ele.name.first);
+}
+console.log(firstName(persons));
 /*
 3
 Using the varabile persons
@@ -40,8 +48,13 @@ and return the average age of those persons
 
 Ex: averageAge(persons) => 41.2
 */
+let avgAge = (array) => {
+  array = array.map((ele) => ele.age);
+  const sum = array.reduce((acc, curr) => acc + curr);
+  return sum / array.length;
+};
 
-
+console.log(avgAge(persons));
 /*
 4
 Using the varabile persons
@@ -51,7 +64,11 @@ and return the full name of the older person
 
 Ex: olderPerson(persons) => "Soso Al-Amora"
 */
-
+let olderPerson = (array) => {
+  return array.reduce((acc, curr) => acc > curr ? acc : curr);
+}
+persons = persons.map((ele) => ele.name);
+console.log(olderPerson(persons));
 
 /*
 5
@@ -62,7 +79,6 @@ and return the full name of the person have longest full name
 
 Ex: longestName(persons) => "Soso Al-Amora"
 */
-
 
 /*
 6
@@ -99,8 +115,6 @@ Ex: repeatWord("My name is alex mercer class name B baba mama hello Hello HELLO"
 }
 */
 
-
-
 /*
 8
 Create a function called repeatChar
@@ -113,7 +127,6 @@ Ex: repeatChar("mamababatetacedo")
 => { m:2,  a:5, b:2, t2:, e:2, c:1, d:1, o:1}
 */
 
-
 /*
 9
 Create a function called selectFromObject
@@ -123,7 +136,6 @@ and return an object have the key that inside the array
 Ex: selectFromObject({a: 1, cat: 3}, ['a', 'cat', 'd'])
 =>  {a: 1, cat: 3}
 */
-
 
 /*
 10
@@ -135,7 +147,6 @@ Ex: objectToArray({firstName:"Moh",age:24})
 => ["firstName","Moh","age",24]
 */
 
-
 /*
 11
 Create a function called arrayToObject
@@ -145,7 +156,6 @@ and return an object of the keys and values in this object
 Ex: arrayToObject(["firstName","Moh","age",24])
 => {firstName:"Moh",age:24}
 */
-
 
 /*
 12
@@ -158,7 +168,6 @@ Ex: onlyNumber({firstName:"Moh",age:24,movies:[1,5,"string"]})
 => {age:24}
 */
 
-
 /*
 13
 Create a function called onlyString
@@ -169,7 +178,6 @@ and return a new object that have only the values that is a string
 Ex: onlyString({firstName:"Moh",age:24,movies:[1,5,"string"]})
 => {firstName:"Moh"}
 */
-
 
 /*
 14
@@ -182,7 +190,6 @@ Ex: onlyArray({firstName:"Moh",age:24,movies:[1,5,"string"]})
 => {movies:[1,5,"string"]}
 */
 
-
 /*
 15
 Create a function called keysArray
@@ -193,7 +200,6 @@ Ex: keysArray({firstName:"Moh",age:24,movies:[1,5,"string"]})
 => ['firstName', 'age', 'movies']
 
 */
-
 
 /*
 16
@@ -206,14 +212,12 @@ Ex: keysArray({firstName:"Moh",age:24,movies:[1,5,"string"]})
 
 */
 
-
 /*
 17
 make this object => {a:1,b:3,c:4}
 to be this object {a:4,c:66}
 **hint: Search on MDN how to remove a key/value from an object
 */
-
 
 /*
 18
@@ -225,7 +229,6 @@ Ex: keysArray({a:1,b:2,c:3,d:4})
 => 4
 */
 
-
 /*
 19
 Create a function called evenValue
@@ -235,7 +238,6 @@ and return a new object that have only the key/values if the value is even
 Ex: evenValue({a:1, b:2, c:3, d:4})
 => {b:2, d:4}
 */
-
 
 /*
 20
